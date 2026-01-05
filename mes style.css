@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #000;
+}
+
+.top-bar .logo {
+    color:gold;
+}
+
+.top-bar a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* ===== CHECKOUT ===== */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.checkout-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: fadeUp 0.8s ease;
+}
+
+.checkout-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #203a43;
+}
+
+.checkout-card h2 i {
+    color: #00bfa6;
+}
+
+/* ===== FORM ===== */
+form .row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+form textarea {
+    resize: none;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #00bfa6;
+}
+
+/* ===== BUTTON ===== */
+form button {
+    width: 100%;
+    background: #25D366;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button i {
+    margin-right: 8px;
+}
+
+form button:hover {
+    background: #1ebc5a;
+    transform: scale(1.03);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 500px) {
+    form .row {
+        flex-direction: column;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    position: relative;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 0;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+    color: #3cff7f;
+}
+
+/* ???? ??????? */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00ff88, #00cfff);
+    transition: 0.4s ease;
+    border-radius: 10px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active page */
+.nav-link.active {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    box-shadow: 0 0 10px #00ff88;
+}
+
