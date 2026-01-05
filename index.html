@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fares Cycle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="top-bar">
+    <h1 class="logo">Fares Cycle</h1>
+
+    <nav class="nav">
+  <a href="index.html" class="nav-link active">Home</a>
+  <a href="cart.html" class="nav-link">
+    Cart <span class="cart-count">🛒</span>
+  </a>
+  <a href="checkout.html" class="nav-link">Checkout</a>
+</nav>
+</header>
+<!-- SEARCH -->
+<div class="search-container">
+    <i class="fas fa-search"></i>
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products..."
+        onkeyup="searchProducts()"
+    >
+</div>
+<section class="products">
+    <h2>ARTICLE</h2>
+
+    <div class="product-grid" id="productGrid">
+
+        <div class="product-card">
+            <img src="img/selljaune.jpeg" width="150" height="150" alt="">
+            <h3>SHELL HELIX</h3>
+            <p>19.5 DT</p>
+            <button onclick="addToCart('SHELL HELIX',19.5,'sell jaune.jpeg')">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/shellrouge.jpeg" width="150" height="150" alt="">
+            <h3>SHELL HELIX</h3>
+            <p>18.5 DT</p>
+            <button onclick="addToCart('SHELL HELIX',18.5)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+           <img src="img/shelladvance.jpeg" width="150" height="150" alt="">
+            <h3>SHELL ADVANCE</h3>
+            <p>19.5 DT</p>
+            <button onclick="addToCart('SHELL ADVANCE',19.5)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+           <img src="img/total5000.jpeg" width="150" height="150" alt="">
+            <h3>TOTAL 5000</h3>
+            <p>17.5 DT</p>
+            <button onclick="addToCart('TOTAL 5000',17.5)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/totalsupper.jpeg" width="150" height="150" alt="">
+            <h3>TOTAL SUPPER</h3>
+            <p>22 DT</p>
+            <button onclick="addToCart('TOTAL SUPPER',22)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="img/agiltanix500.jpeg" width="150" height="150" alt="">
+            <h3>AGIL TANIX 500</h3>
+            <p>14.5 DT</p>
+            <button onclick="addToCart('AGIL TANIX 500',14.5)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="img/motul.jpeg" width="150" height="150" alt="">
+            <h3>MOTUL</h3>
+            <p>20 DT</p>
+            <button onclick="addToCart('MOTUL',20)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+          <img src="img/planetoil.jpeg" width="150" height="150" alt="">
+            <h3>PLANET OIL</h3>
+            <p>9.5 DT</p>
+            <button onclick="addToCart('PLANET OIL',9.5)">Ajouter au panier</button>
+        </div>
+
+          <div class="product-card">
+            <img src="img/cylinderefourza110fcg.jpeg" width="150" height="150" alt="">
+            <h3>CYLINDRE FORZA 110cc FCG</h3>
+            <p>68 DT</p>
+            <button onclick="addToCart('CYLINDRE FORZA 110cc FCG',68)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+           <img src="img/cylindreovetto50cc .jpeg" width="150" height="150" alt="">
+            <h3>CYLINDRE OVETTO 50cc</h3>
+            <p>78 DT</p>
+            <button onclick="addToCart('CYLINDRE OVETTO 50cc',78)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+            <img src="img/cylindre boosterBWS50cc.jpeg" width="150" height="150" alt="">
+            <h3>CYLINDRE BOOSTER BWS 50cc</h3>
+            <p>78 DT</p>
+            <button onclick="addToCart('CYLINDRE BOOSTER BWS 50cc',78)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+            <img src="img/cylindreciao50cc.jpeg" width="150" height="150" alt="">
+            <h3>CYLINDRE CIAO 50cc</h3>
+            <p>78 DT</p>
+            <button onclick="addToCart(' CYLINDRE CIAO 50cc',78)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+           <img src="img/cylindrepeugeot10350cc.jpeg" width="150" height="150" alt="">
+            <h3> CYLINDRE PEUGEOT 103 50cc</h3>
+            <p>98 DT</p>
+            <button onclick="addToCart('CYLINDRE PEUGEOT 103 50cc',98)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+          <img src="img/cylindrejialing.jpeg" width="150" height="150" alt="">
+            <h3> CYLINDRE JIALING FCG ORIGINALE 50cc</h3>
+            <p>78 DT</p>
+            <button onclick="addToCart('CYLINDRE JIALING FCG ORIGINALE 50cc',78)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+           <img src="img/cylindrepeugeot10350cc.jpeg" width="150" height="150" alt="">
+            <h3> CYLINDRE PEUGEOT 103 CYCLE EURO ORIGINALE 50cc</h3>
+            <p>138 DT</p>
+            <button onclick="addToCart('CYLINDRE PEUGEOT 103 CYCLE EURO ORIGINALE 50cc ',138)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+          <img src="img/carburateurForza.jpeg" width="150" height="150" alt="">
+            <h3> CARBURATEUR FORZA 110</h3>
+            <p>58 DT</p>
+            <button onclick="addToCart('CARBURATEUR FORZA 110cc ',58)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+           <img src="img/carburateur peugeot103 ancienne.jpeg" width="150" height="150" alt="">
+            <h3> CARBURATEUR PEUGEOT 103 ANCIENNE</h3>
+            <p>58 DT</p>
+            <button onclick="addToCart('CARBURATEUR PEUGEOT 103 ANCIENNE ',58)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/carburateur peugeot103 nouveau.jpeg" width="150" height="150" alt="">
+            <h3> CARBURATEUR PEUGEOT 103 NOUVEAU</h3>
+            <p>58 DT</p>
+            <button onclick="addToCart('CARBURATEUR PEUGEOT 103 NOUVEAU ',58)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+           <img src="img/compteur digitaleFourza.jpeg" width="150" height="150" alt="">
+            <h3>COMPTEUR DIGITALE FORZA</h3>
+            <p>120 DT</p>
+            <button onclick="addToCart('COMPTEUR DIGITALE FORZA ',120)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/compteurdigitalforzafmax.jpeg" width="150" height="150" alt="">
+            <h3>COMPTEUR DIGITALE FORZA F-Max</h3>
+            <p>120 DT</p>
+            <button onclick="addToCart('COMPTEUR DIGITALE FORZA F-Max ',120)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/compteur Fourzasimplr.jpeg" width="150" height="150" alt="">
+            <h3>COMPTEUR FORZA SIMPLE</h3>
+            <p>48 DT</p>
+            <button onclick="addToCart('COMPTEUR FORZA SIMPLE',48)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/mitageurdouchedjerba.jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR DOUCHE DJERBA SOPAL</h3>
+            <p>159.5 DT</p>
+            <button onclick="addToCart('MITAGEUR DOUCHE DJERBA SOPAL',159.5)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+          <img src="img/mitageurlavabodjerba.jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR LAVABO DJERBA SOPAL</h3>
+            <p>145 DT</p>
+            <button onclick="addToCart('MITAGEUR LAVABO DJERBA SOPAL',145)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/mitageurevierdjerba.jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR EVIER DJERBA SOPAL</h3>
+            <p>178 DT</p>
+            <button onclick="addToCart('MITAGEUR EVIER DJERBA SOPAL',178)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/mitageurtoilettekerkennah.jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR TOILETTE KERKENNAH SOPAL</h3>
+            <p>58 DT</p>
+            <button onclick="addToCart('MITAGEUR TOILETTE KERKENNAH SOPAL',58)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+           <img src="img/mitageurtoilettedjerba.jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR TOILETTE DJERBA SOPAL</h3>
+            <p>68 DT</p>
+            <button onclick="addToCart('MITAGEUR TOILETTE DJERBA SOPAL',68)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/mitageurevierkerkennah.jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR EVIER KERKENNAH SOPAL</h3>
+            <p>155 DT</p>
+            <button onclick="addToCart('MITAGEUR EVIER DJERBA SOPAL',155)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/mitageurlavabokerkennah.jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR LAVABO KERKENNAH SOPAL</h3>
+            <p>135 DT</p>
+            <button onclick="addToCart('MITAGEUR LAVABO KERKENNAH SOPAL',135)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/melangeureviersalakta.jpeg" width="150" height="150" alt="">
+            <h3>MELANGEUR EVIER SALAKTA SOPAL</h3>
+            <p>98.5 DT</p>
+            <button onclick="addToCart('MELANGEUR EVIER SALAKTA SOPAL',98.5)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+          <img src="img/melangeurlavabobecrondsalakta.jpeg" width="150" height="150" alt="">
+            <h3>MELANGEUR LAVABO BEC ROND SALAKTA SOPAL</h3>
+            <p>98.5 DT</p>
+            <button onclick="addToCart('MELANGEUR LAVABO BEC ROND SALAKTA SOPAL',98.5)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+           <img src="img/metageurdouchekerkennah .jpeg" width="150" height="150" alt="">
+            <h3>MITAGEUR DOUCHE KERKENNAH SOPAL</h3>
+            <p>149.5 DT</p>
+            <button onclick="addToCart('MITAGEUR DOUCHE KERKENNAH SOPAL',149.5)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/melangeurdouchesalakta.jpeg" width="150" height="150" alt="">
+            <h3>MELANGEUR DOUCHE SALAKTA SOPAL</h3>
+            <p>89 DT</p>
+            <button onclick="addToCart('MELANGEUR DOUCHE SALAKTA SOPAL',89)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+          <img src="img/filtercompitition.jpeg" width="150" height="150" alt="">
+            <h3>FILTER COMPITITION</h3>
+            <p>22 DT</p>
+            <button onclick="addToCart('FILTER COMPITITION',22)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+         <img src="img/teteavantcompletfourza.jpeg" width="150" height="150" alt="">
+            <h3>TETE AVANT COMPLET FORZA</h3>
+            <p>49 DT</p>
+            <button onclick="addToCart('TETE AVANT COMPLET FORZA',49)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+        <img src="img/fnaravantfourza.jpeg" width="150" height="150" alt="">
+            <h3>FNAR AVANT FORZA</h3>
+            <p>16 DT</p>
+            <button onclick="addToCart('FNAR AVANT FORZA',16)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+          <img src="img/filtercompititionourza spontex.jpeg" width="150" height="150" alt="">
+            <h3>FILTER COMPITITION  SPONTEX </h3>
+            <p>22 DT</p>
+            <button onclick="addToCart('FILTER COMPITITION SPONTEX',22)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+         <img src="img/lampeledzoombouma.jpeg" width="150" height="150" alt="">
+            <h3>LAMPE LED ZOOM BOUMA MOTO</h3>
+            <p>26 DT</p>
+            <button onclick="addToCart('LAMPE LED ZOOM BOUMA MOTO',26)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+        <img src="img/lampeled4zoom.jpeg" width="150" height="150" alt="">
+            <h3>LAMPE LED 4 ZOOM MOTO</h3>
+            <p>32 DT</p>
+            <button onclick="addToCart('LAMPE LED 4 ZOOM MOTO',32)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+      <img src="img/barreledmoto .jpeg" width="150" height="150" alt="">
+            <h3>BARRE LED MOTO</h3>
+            <p>17.5 DT</p>
+            <button onclick="addToCart('BARRE LED MOTO',17.5)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+     <img src="img/barreledmoto 1.jpeg" width="150" height="150" alt="">
+            <h3>BARRE LED MOTO</h3>
+            <p>23 DT</p>
+            <button onclick="addToCart('BARRE LED MOTO',23)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+     <img src="img/flashclassique.jpeg" width="150" height="150" alt="">
+            <h3>FLASH CLASSIQUE 40KG</h3>
+            <p>70 DT</p>
+            <button onclick="addToCart('FLASH CLASSIQUE 40KG',70)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+     <img src="img/flashextra.jpeg" width="150" height="150" alt="">
+            <h3>FLASH EXTRA 40KG</h3>
+            <p>90 DT</p>
+            <button onclick="addToCart('FLASH EXTRA 40KG',90)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+    <img src="img/feu rouge arrierefourza.jpeg" width="150" height="150" alt="">
+            <h3>FEU ROUGE ARRIERE FORZA</h3>
+            <p>16.5 DT</p>
+            <button onclick="addToCart('FEU ROUGE ARRIERE FORZA',16.5)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+    <img src="img/reservoirfourza.jpeg" width="150" height="150" alt="">
+            <h3>RESERVOIR FORZA ORIGINALE</h3>
+            <p>37 DT</p>
+            <button onclick="addToCart('RESERVOIR FORZA ORIGINALE',37)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+    <img src="img/systemealarmefourza.jpeg" width="150" height="150" alt="">
+            <h3>SYSTEME ALARME FORZA</h3>
+            <p>37 DT</p>
+            <button onclick="addToCart('SYSTEME ALARME FORZA',37)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+    <img src="img/supporttelephone.jpeg" width="150" height="150" alt="">
+            <h3>SUPPORT TELEPHONE</h3>
+            <p>22 DT</p>
+            <button onclick="addToCart('SUPPORT TELEPHONE',22)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+    <img src="img/supportfourza.jpeg" width="150" height="150" alt="">
+            <h3>SUPPORT FORZA</h3>
+            <p>17.5 DT</p>
+            <button onclick="addToCart('SUPPORT FORZA',17.5)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+    <img src="img/kitchainechohofourza.jpeg" width="150" height="150" alt="">
+            <h3>KIT CHAINE CHOHO FORZA</h3>
+            <p>37 DT</p>
+            <button onclick="addToCart('KIT CHAINE CHOHO FORZA',37)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+    <img src="img/carinagefourzacomplet.jpeg" width="150" height="150" alt="">
+            <h3>CARINAGE FORZA COMPLET</h3>
+            <p>250 DT</p>
+            <button onclick="addToCart('CARINAGE FORZA COMPLET',250)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+   <img src="img/cadenasalarmefourza.jpeg" width="150" height="150" alt="">
+            <h3>CADENAS ALARME FORZA</h3>
+            <p>37 DT</p>
+            <button onclick="addToCart('CADENAS ALARME FORZA',37)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+  <img src="img/bloccdiforzadigitale4f.jpeg" width="150" height="150" alt="">
+            <h3>BLOC CDI FORZA DIGITALE 4F</h3>
+            <p>17.5 DT</p>
+            <button onclick="addToCart('BLOC CDI FORZA DIGITALE 4F',17.5)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+  <img src="img/baguerouearriere forza110cc.jpeg" width="150" height="150" alt="">
+            <h3>BAGUE ROUE ARRIERE FORZA 110cc</h3>
+            <p>3.5 DT</p>
+            <button onclick="addToCart('BAGUE ROUE ARRIERE FORZA 110cc',3.5)">Ajouter au panier</button>
+        </div>
+        <div class="product-card">
+ <img src="img/echappementforza110cc.jpeg" width="150" height="150" alt="">
+            <h3>ECHAPPEMENT FORZA 110cc</h3>
+            <p>110 DT</p>
+            <button onclick="addToCart('ECHAPPEMENT FORZA 110cc',110)">Ajouter au panier</button>
+        </div>
+
+
+         <div class="product-card">
+ <img src="img/amortisseurbooster.jpeg" width="150" height="150" alt="">
+            <h3>AMORTISSEUR BOOSTER</h3>
+            <p>48 DT</p>
+            <button onclick="addToCart('AMORTISSEUR BOOSTER',48)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/amortisseurforzanboriginale.jpeg" width="150" height="150" alt="">
+            <h3>AMORTISSEUR FORZA NB ORIGINALE</h3>
+            <p>78 DT</p>
+            <button onclick="addToCart('AMORTISSEUR FORZA NB ORIGINALE',78)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/leviervitesseforzarizoma.jpeg" width="150" height="150" alt="">
+            <h3>LEVIER VITESSE FORZA RIZOMA</h3>
+            <p>22 DT</p>
+            <button onclick="addToCart('LEVIER VITESSE FORZA RIZOMA',22)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+<img src="img/leviervitesseforza.jpeg" width="150" height="150" alt="">
+            <h3>LEVIER VITESSE FORZA</h3>
+            <p>9.5 DT</p>
+            <button onclick="addToCart('LEVIER VITESSE FORZA',9.5)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/manetteforzacolore.jpeg" width="150" height="150" alt="">
+            <h3>MANETTE FORZA COLORÉ</h3>
+            <p>10.5 DT</p>
+            <button onclick="addToCart('MANETTE FORZA COLORÉ',10.5)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/manivelledemarrageforza.jpeg" width="150" height="150" alt="">
+            <h3>MANIVELLE DEMARRAGE FORZA</h3>
+            <p>9.5 DT</p>
+            <button onclick="addToCart('MANIVELLE DEMARRAGE FORZA',9.5)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/manetterizomaforza.jpeg" width="150" height="150" alt="">
+            <h3>MANETTE RIZOMA FORZA</h3>
+            <p>14.5 DT</p>
+            <button onclick="addToCart('MANETTE RIZOMA FORZA',14.5)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+<img src="img/matcylinderfreinscooter.jpeg" width="150" height="150" alt="">
+            <h3>MAT CYLINDRE FREIN SCOOTER</h3>
+            <p>78 DT</p>
+            <button onclick="addToCart('MAT CYLINDRE FREIN SCOOTER',78)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+<img src="img/posepiedarrierecompletforza.jpeg" width="150" height="150" alt="">
+            <h3>POSE PIED ARRIERE COMPLET FORZA</h3>
+            <p>110 DT</p>
+            <button onclick="addToCart('POSE PIED ARRIERE COMPLET FORZA',110)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/pedalefreinforza.jpeg" width="150" height="150" alt="">
+            <h3>PEDALE FREIN FORZA</h3>
+            <p>14 DT</p>
+            <button onclick="addToCart('PEDALE FREIN FORZA',14)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/posepiedarriereforza.jpeg" width="150" height="150" alt="">
+            <h3>POSE PIED ARRIERE FORZA</h3>
+            <p>8.5 DT</p>
+            <button onclick="addToCart('POSE PIED ARRIERE FORZA',8.5)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/posepiedavantcompletforza.jpeg" width="150" height="150" alt="">
+            <h3>POSE PIED AVANT COMPLET FORZA</h3>
+            <p>19 DT</p>
+            <button onclick="addToCart('POSE PIED AVANT COMPLET FORZA',19)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+ <img src="img/posepiedavantforza.jpeg" width="150" height="150" alt="">
+            <h3>POSE PIED AVANT FORZA</h3>
+            <p>6.5 DT</p>
+            <button onclick="addToCart('POSE PIED AVANT FORZA',6.5)">Ajouter au panier</button>
+        </div>
+
+         <div class="product-card">
+<img src="img/protegemainledforza.jpeg" width="150" height="150" alt="">
+            <h3>PROTEGE MAIN LED FORZA</h3>
+            <p>39 DT</p>
+            <button onclick="addToCart('PROTEGE MAIN LED FORZA',39)">Ajouter au panier</button>
+        </div>
+         <div class="product-card">
+ <img src="img/vilbrequinforzaoriginale.jpeg" width="150" height="150" alt="">
+            <h3>VILBREQUIN FORZA NB ORIGINALE</h3>
+            <p>98 DT</p>
+            <button onclick="addToCart('VILBREQUIN FORZA NB ORIGINALE',98)">Ajouter au panier</button>
+        </div>
+          <div class="product-card">
+<img src="img/manetteprotaperforza.jpeg" width="150" height="150" alt="">
+            <h3>MANETTE PRO TAPER FORZA</h3>
+            <p>14.5 DT</p>
+            <button onclick="addToCart('MANETTE PRO TAPER FORZA',14.5)">Ajouter au panier</button>
+        </div>
+
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 by ayoub arem
+</footer>
+<script src="script.js"></script>
+
+
+</body>
+</html>

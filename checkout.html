@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Commander</title>
+    <link rel="stylesheet" type="text/css" href="mes style.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <h2 class="logo">Fares Cycle</h2>
+   <nav class="nav">
+         <a href="index.html" class="nav-link">Home</a>
+  <a href="cart.html" class="nav-link">Cart 🛒</a>
+  <a href="checkout.html" class="nav-link active">Checkout</a>
+    </nav>
+</header>
+
+<div class="checkout-container">
+    <div class="checkout-card">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Commander</h2>
+
+        <form id="orderForm">
+            <div class="row">
+                <input type="text" name="Nom" placeholder="Nom" required>
+            </div>
+            <div  class="row">
+                 <input type="text" name="prenom" placeholder="Prenom" required>
+            </div>
+
+            <div class="row">
+                <input type="text" name="Téléphone" placeholder="Téléphone" required>
+            </div>
+
+           <div class="row">
+               <input type="text" name="Adresse" placeholder="Adresse" required>
+           </div>
+
+           <div  class="row">
+               <input type="text" name="ville" placeholder="Ville" required>
+           </div>
+
+            <button type="submit">
+                <i class="fa-brands fa-whatsapp"></i> Commander via WhatsApp
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
