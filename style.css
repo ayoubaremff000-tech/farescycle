@@ -611,72 +611,51 @@ footer{
 }
 
 
-/* ========================= */
-/* PC (default)              */
-/* ========================= */
+/* ================= MOBILE REAL FIX ================= */
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+@media screen and (max-width: 768px) {
 
-.logo-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.menu {
-  display: flex;
-  gap: 20px;
-}
-
-.search-category {
-  display: flex;
-  gap: 10px;
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-/* ========================= */
-/* MOBILE FIX (الحل الحقيقي) */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-  /* Header ما يتكسرش */
-  .header {
-    flex-direction: row;
-    flex-wrap: nowrap;
+  /* HEADER */
+  header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
   }
 
-  .logo-box {
-    flex-direction: row;
-    white-space: nowrap;
+  .logo,
+  .logo-box,
+  .logo-container {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
   }
 
+  nav,
   .menu {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
   }
 
-  .menu a {
+  nav a {
+    white-space: nowrap !important;
     font-size: 14px;
-    white-space: nowrap;
   }
 
-  /* Search + catégorie جنب بعضهم */
-  .search-category {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
+  /* SEARCH + CATEGORY */
+  .search-category,
+  .search-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
   }
 
   .search-category select,
   .search-category input {
-    width: 50%;
-    min-width: 0;
+    width: 50% !important;
   }
 }
