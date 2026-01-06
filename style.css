@@ -710,3 +710,7 @@ footer{
     min-width: 0 !important;
   }
 }
+
+@media (max-width: 768px) {
+  body { background: red !important; }
+}
