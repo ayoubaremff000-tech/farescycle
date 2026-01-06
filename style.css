@@ -611,54 +611,72 @@ footer{
 }
 
 
-/* ===== MOBILE FIX ONLY ===== */
+/* ========================= */
+/* PC (default)              */
+/* ========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.search-category {
+  display: flex;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* ========================= */
+/* MOBILE FIX (الحل الحقيقي) */
+/* ========================= */
+
 @media (max-width: 768px) {
 
   /* Header ما يتكسرش */
-  header {
-    display: flex;
+  .header {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: nowrap;
   }
 
-  /* Logo + title */
-  .logo,
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .logo-box {
+    flex-direction: row;
     white-space: nowrap;
   }
 
-  /* Menu (Home Cart Checkout) */
-  nav {
-    display: flex;
+  .menu {
     flex-direction: row;
-    gap: 12px;
     flex-wrap: nowrap;
+    gap: 12px;
   }
 
-  nav a {
+  .menu a {
     font-size: 14px;
     white-space: nowrap;
   }
-}
 
-@media (max-width: 768px) {
+  /* Search + catégorie جنب بعضهم */
   .search-category {
-    display: flex;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
   }
 
-  .search-category select {
-    width: 40%;
-  }
-
+  .search-category select,
   .search-category input {
-    width: 60%;
+    width: 50%;
+    min-width: 0;
   }
 }
-
-
