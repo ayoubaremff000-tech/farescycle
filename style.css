@@ -611,37 +611,33 @@ footer{
 }
 
 
-/* ===== MOBILE FIX HEADER ===== */
+/* ===== MOBILE FIX ONLY ===== */
 @media (max-width: 768px) {
 
+  /* Header ما يتكسرش */
   header {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 10px 15px;
   }
 
-  .logo {
+  /* Logo + title */
+  .logo,
+  .logo-container {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-
-  .logo img {
-    width: 40px;
-    height: auto;
-  }
-
-  .logo span,
-  .logo h1 {
-    font-size: 16px;
     white-space: nowrap;
   }
 
+  /* Menu (Home Cart Checkout) */
   nav {
     display: flex;
+    flex-direction: row;
     gap: 12px;
+    flex-wrap: nowrap;
   }
 
   nav a {
@@ -651,27 +647,18 @@ footer{
 }
 
 @media (max-width: 768px) {
-
   .search-category {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
+    gap: 10px;
   }
 
   .search-category select {
     width: 40%;
-    min-width: 120px;
-    height: 45px;
-    border-radius: 30px;
-    font-size: 14px;
   }
 
   .search-category input {
     width: 60%;
-    height: 45px;
-    border-radius: 30px;
-    font-size: 14px;
   }
 }
+
 
