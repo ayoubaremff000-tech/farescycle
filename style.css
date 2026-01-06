@@ -611,104 +611,70 @@ footer{
 }
 
 
-[22:29, 06/01/2026] Ayoub Arem: /* ================= MOBILE REAL FIX ================= */
-
-@media screen and (max-width: 768px) {
-
-  /* HEADER */
-  header {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    flex-wrap: nowrap !important;
-  }
-
-  .logo,
-  .logo-box,
-  .logo-container {
-    display: flex !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-  }
-
-  nav,
-  .menu {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 10px !important;
-    flex-wrap: nowrap !important;
-  }
-
-  nav a {
-    white-space: nowrap !important;
-    font-size: 14px;
-  }
-
-  /* SEARCH + CATEGORY */
-  .search-category,
-  .search-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    width: 100% !important;
-  }
-
-  .search-category select,
-  .search-category input {
-    width: 50% !important;
-  }
-}
-[22:36, 06/01/2026] Ayoub Arem: /* ================= FORCE MOBILE HEADER & SEARCH ================= */
+/* =========================
+   MOBILE VERSION
+   ========================= */
 @media (max-width: 768px) {
 
-  header,
-  .header {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    flex-wrap: nowrap !important;
+  /* HEADER */
+  header.top-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
   }
 
-  .logo,
-  .logo-box,
-  .logo-container {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    white-space: nowrap !important;
+  .logo-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  nav,
-  .menu {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 10px !important;
+  .logo-box img {
+    width: 60px;
+    height: 60px;
   }
 
-  nav a {
-    white-space: nowrap !important;
-    font-size: 14px !important;
+  .logo-box .fares,
+  .logo-box .cycle {
+    font-size: 18px;
   }
 
-  /* SEARCH + CATEGORY */
-  .search-category,
-  .search-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    width: 100% !important;
+  /* NAV MENU */
+  nav.nav {
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
   }
 
-  .search-category select,
-  .search-category input,
-  .search-container input {
-    width: 50% !important;
-    min-width: 0 !important;
+  /* SEARCH + CATEGORY SAME LINE */
+  .ultra-search {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
   }
+
+  /* CATEGORY */
+  .category-select {
+    flex: 1;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .cat-list {
+    width: 100%;
+  }
+
+  /* SEARCH INPUT */
+  .ultra-search input {
+    flex: 2;
+    font-size: 14px;
+    padding: 10px;
+  }
+
 }
 
 
