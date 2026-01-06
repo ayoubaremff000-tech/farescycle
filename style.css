@@ -611,4 +611,67 @@ footer{
 }
 
 
+/* ===== MOBILE FIX HEADER ===== */
+@media (max-width: 768px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+
+  .logo span,
+  .logo h1 {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  nav {
+    display: flex;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .search-category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .search-category select {
+    width: 40%;
+    min-width: 120px;
+    height: 45px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+
+  .search-category input {
+    width: 60%;
+    height: 45px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+}
 
