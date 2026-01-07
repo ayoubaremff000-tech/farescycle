@@ -613,22 +613,3 @@ footer{
 
 
     
-  /* MENU */
-  nav,
-  .nav,
-  .menu {
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;          /* نقرّبهم */
-    flex-wrap: nowrap !important; /* ما يهبطوش */
-  }
-
-  nav a,
-  .nav-link,
-  .menu a {
-    font-size: 12px !important;   /* نصغّرهم */
-    padding: 4px 6px !important;
-    white-space: nowrap !important;
-  }
-
-}
