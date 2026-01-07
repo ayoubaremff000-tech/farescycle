@@ -611,5 +611,36 @@ footer{
 
 
 
+/* =========================
+   MOBILE MENU ONLY FIX
+   LOGO NOT TOUCHED
+   ========================= */
+@media (max-width: 768px) {
 
+  /* نلمسو كان الـ MENU */
+  nav,
+  .nav {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 6px !important;          /* قرّبهم */
+    flex-wrap: nowrap !important; /* ما يهبطوش */
+  }
+
+  /* روابط المينيو فقط */
+  nav a,
+  .nav-link {
+    font-size: 12px !important;   /* صغار */
+    padding: 4px 6px !important;  /* ما ياكلوش بلاصتهم */
+    white-space: nowrap !important;
+  }
+
+  /* أيقونة الكار */
+  nav a i {
+    font-size: 12px !important;
+  }
+
+}
     
+
