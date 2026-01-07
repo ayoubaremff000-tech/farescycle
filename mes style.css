@@ -259,3 +259,76 @@ form button:hover {
 .footer-bottom span {
     color: #25D366;
 }
+
+
+
+
+
+
+/* ===== FORCE HEADER MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header,
+  .header,
+  nav {
+    padding: 4px 6px !important;
+    height: auto !important;
+  }
+
+  /* CONTAINER */
+  header > div,
+  nav > div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* LOGO IMAGE */
+  header img,
+  .logo img {
+    width: 38px !important;
+    height: 38px !important;
+    max-width: 38px !important;
+  }
+
+  /* LOGO TEXT (Fares Cycle) */
+  .logo span,
+  .logo h1,
+  .logo h2 {
+    font-size: 14px !important;
+    margin: 0 6px !important;
+    white-space: nowrap !important;
+  }
+
+  /* MENU */
+  ul,
+  .menu,
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* MENU LINKS */
+  ul li a,
+  .menu a,
+  nav a {
+    font-size: 12px !important;
+    padding: 4px 6px !important;
+    white-space: nowrap !important;
+  }
+
+  /* CART ICON */
+  .cart,
+  .cart-icon {
+    font-size: 14px !important;
+    margin-left: 4px !important;
+  }
+
+}
+
