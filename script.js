@@ -1,11 +1,21 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 /* ADD TO CART */
-function Ajouteraupanier(name, price){
-    cart.push({name, price});
+function Ajouteraupanier(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let found = cart.find(item => item.name === name);
+
+    if (found) {
+        found.qty += 1;
+    } else {
+        cart.push({ name, price, qty: 1 });
+    }
+
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert("Ajouter 🛒");
+    alert("Ajouté au panier 🛒");
 }
+
 
 /* DISPLAY CART */
 function displayCart(){
@@ -98,28 +108,6 @@ function filterUltra() {
         count + " produit(s) trouvé(s)";
 }
 
-document.getElementById("orderForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // يمنع reload
-
-    let nom = document.querySelector('input[name="Nom"]').value;
-    let prenom = document.querySelector('input[name="prenom"]').value;
-    let tel = document.querySelector('input[name="Téléphone"]').value;
-    let adresse = document.querySelector('input[name="Adresse"]').value;
-    let ville = document.querySelector('input[name="ville"]').value;
-
-    let message =
-        "🛒 Nouvelle Commande %0A%0A" +
-        "👤 Nom: " + nom + " " + prenom + "%0A" +
-        "📞 Téléphone: " + tel + "%0A" +
-        "📍 Adresse: " + adresse + "%0A" +
-        "🏙 Ville: " + ville;
-
-    let phone = "21650548952"; // ❗ بدّل بالرقم متاعك (من غير +)
-
-    let url = "https://wa.me/" + phone + "?text=" + message;
-
-    window.open(url, "_blank");
-});
 
 function addToCart(name, price) {
 
@@ -150,60 +138,6 @@ function addToCart(name, price) {
 }
 
 
-document.getElementById("orderForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // ===== FORM =====
-    var nom = document.querySelector('input[name="Nom"]').value;
-    var prenom = document.querySelector('input[name="prenom"]').value;
-    var tel = document.querySelector('input[name="Téléphone"]').value;
-    var adresse = document.querySelector('input[name="Adresse"]').value;
-    var ville = document.querySelector('input[name="ville"]').value;
-
-    // ===== CART =====
-    var cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    if (cart.length === 0) {
-        alert("Panier vide");
-        return;
-    }
-
-    var livraison = 7;
-    var total = 0;
-    var produits = "";
-
-    for (var i = 0; i < cart.length; i++) {
-        var item = cart[i];
-        var subTotal = item.price * item.qty;
-        total += subTotal;
-
-        produits +=
-            (i + 1) + ") " + item.name + "%0A" +
-            "Quantité: " + item.qty + "%0A" +
-            "Prix: " + item.price + " DT%0A" +
-            "Sous-total: " + subTotal + " DT%0A%0A";
-    }
-
-    var totalFinal = total + livraison;
-
-    // ===== MESSAGE =====
-    var message =
-        "NOUVELLE COMMANDE%0A%0A" +
-        "Nom: " + nom + " " + prenom + "%0A" +
-        "Téléphone: " + tel + "%0A" +
-        "Adresse: " + adresse + "%0A" +
-        "Ville: " + ville + "%0A%0A" +
-        "Produits:%0A" +
-        produits +
-        "Livraison: " + livraison + " DT%0A" +
-        "TOTAL: " + totalFinal + " DT";
-
-    var phone = "21650548952"; // رقمك
-    var url = "https://wa.me/" + phone + "?text=" + message;
-
-    window.open(url, "_blank");
-});
-
 function toggleCategory(){
     const list = document.getElementById("categoryList");
     list.style.display = list.style.display === "block" ? "none" : "block";
@@ -231,3 +165,4 @@ document.addEventListener("click", function (e) {
         list.classList.remove("open");
     }
 });
+
