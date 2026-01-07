@@ -589,43 +589,60 @@ footer{
 
 
 
-/* ========== MOBILE ONLY (ما يمسّش PC) ========== */
+/* ================= FORCE MOBILE HEADER ================= */
 @media (max-width: 768px) {
 
-  /* الهيدر كامل */
-  header, .header, nav, .navbar {
+  /* أي header أو nav */
+  header,
+  nav,
+  header *,
+  nav * {
+    box-sizing: border-box !important;
+  }
+
+  header,
+  nav {
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 6px 10px !important;
+    padding: 5px 8px !important;
     gap: 6px !important;
+    width: 100% !important;
   }
 
-  /* LOGO */
-  .logo, .logo img {
-    max-width: 42px !important;
-    max-height: 42px !important;
-    margin: 0 !important;
+  /* أي صورة (logo) داخل الهيدر */
+  header img,
+  nav img {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    object-fit: contain !important;
   }
 
-  /* اسم الموقع */
-  .site-name, .brand, h1 {
-    font-size: 14px !important;
+  /* أي نص جنب اللوغو */
+  header h1,
+  header span,
+  nav h1,
+  nav span {
+    font-size: 13px !important;
     margin: 0 4px !important;
     white-space: nowrap !important;
   }
 
-  /* MENU */
-  ul, .menu, .nav-links {
+  /* أي قائمة menu */
+  header ul,
+  nav ul {
     display: flex !important;
     flex-direction: row !important;
-    align-items: center !important;
-    gap: 8px !important;
+    gap: 6px !important;
     margin: 0 !important;
     padding: 0 !important;
+    list-style: none !important;
   }
 
-  .menu a, .nav-links a {
+  header ul li a,
+  nav ul li a {
     font-size: 12px !important;
     padding: 4px 6px !important;
     white-space: nowrap !important;
