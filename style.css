@@ -545,83 +545,84 @@ footer{
     display: block;
 }
 
-@media (max-width: 768px) {
+   /* =========================================
+   FORCE MOBILE HEADER – SMALL SIZE
+   PC NOT TOUCHED
+========================================= */
+@media screen and (max-width: 768px) {
 
-  header.top-bar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-
-  .logo-box {
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-  }
-
-  nav.nav {
-    display: flex !important;
-    gap: 10px !important;
-  }
-
-  /* FORCE SEARCH + CATEGORY */
-  .ultra-search {
+  /* HEADER */
+  header,
+  .header,
+  .top-bar {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 10px !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    padding: 6px 8px !important;
     width: 100% !important;
   }
 
-  .category-select {
-    width: 40% !important;
+  /* LOGO */
+  .logo,
+  .logo-box,
+  .logo-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
     font-size: 14px !important;
+    white-space: nowrap !important;
+    max-width: 45% !important;
+    overflow: hidden !important;
   }
 
-  .ultra-search input {
-    width: 60% !important;
-    font-size: 14px !important;
+  .logo img {
+    width: 34px !important;   /* 🔥 صغّرنا اللوغو */
+    height: auto !important;
   }
+
+  /* MENU */
+  nav,
+  .nav,
+  .navbar {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    max-width: 55% !important;
+    overflow: hidden !important;
+  }
+
+  nav a,
+  .nav a,
+  .navbar a {
+    font-size: 12px !important;   /* 🔥 صغّرنا النص */
+    padding: 0 4px !important;
+    white-space: nowrap !important;
+  }
+
 }
 
 
 
 
+   /* FORCE SEARCH + CATEGORY */
+    .ultra-search {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
 
-/* =========================
-   MOBILE VERSION
-   ========================= */
-@media (max-width: 768px) {
+    .category-select {
+        width: 40% !important;
+        font-size: 14px !important;
+    }
 
-  /* HEADER */
-  header.top-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 10px;
-  }
-
-  .logo-box {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .logo-box img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .logo-box .fares,
-  .logo-box .cycle {
-    font-size: 18px;
-  }
-
-  /* NAV MENU */
-  nav.nav {
-    display: flex;
-    gap: 15px;
-    font-size: 16px;
-  }
-
-
+    .ultra-search input {
+        width: 60% !important;
+        font-size: 14px !important;
+    }
+}
