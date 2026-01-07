@@ -609,6 +609,22 @@ footer{
     white-space: nowrap !important;
   }
 
+  /* MENU */
+  nav {
+    display: flex !important;
+    gap: 6px !important;
+  }
+
+  nav a,
+  .nav-link {
+    font-size: 12px !important;
+    padding: 3px 5px !important;
+    white-space: nowrap !important;
+  }
+
+}
+
+
 
 
 
