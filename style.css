@@ -613,32 +613,54 @@ footer{
 
 
     
-/* 📱 MOBILE ONLY – MENU FIX */
+/* =========================
+   MOBILE FORCE FIX (FINAL)
+   ========================= */
 @media (max-width: 768px) {
 
-  /* MENU CONTAINER */
+  /* HEADER */
+  header,
+  .top-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 6px 8px !important;
+  }
+
+  /* LOGO AREA (ما نكبروش، ما نصغروش أكثر) */
+  .logo-box {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .logo-box img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .logo-box span {
+    font-size: 14px !important;
+    white-space: nowrap !important;
+  }
+
+  /* MENU */
+  nav,
+  .nav,
   .menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 6px;              /* قرّبهم لبعضهم */
-    flex-wrap: nowrap;     /* ما يهبطوش */
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;          /* نقرّبهم */
+    flex-wrap: nowrap !important; /* ما يهبطوش */
   }
 
-  /* MENU LINKS */
+  nav a,
+  .nav-link,
   .menu a {
-    font-size: 12px;       /* صغّر الكتابة */
-    padding: 3px 5px;      /* نقص المساحة */
-    white-space: nowrap;  /* ما يتكسروش */
+    font-size: 12px !important;   /* نصغّرهم */
+    padding: 4px 6px !important;
+    white-space: nowrap !important;
   }
 
 }
-
-    @media (max-width: 768px) {
-  .menu a {
-    max-width: 70px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
