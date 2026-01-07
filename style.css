@@ -612,35 +612,36 @@ footer{
 
 
 /* =========================
-   MOBILE MENU ONLY FIX
-   LOGO NOT TOUCHED
+   MOBILE FIX – MENU ONLY
    ========================= */
 @media (max-width: 768px) {
 
-  /* نلمسو كان الـ MENU */
-  nav,
+  /* Header layout */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+  }
+
+  /* NAV MENU */
   .nav {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    gap: 6px !important;          /* قرّبهم */
-    flex-wrap: nowrap !important; /* ما يهبطوش */
+    display: flex;
+    align-items: center;
+    gap: 8px;              /* هذا اللي يقرّبهم */
+    flex-wrap: nowrap;     /* يمنع النزول لسطر ثاني */
   }
 
-  /* روابط المينيو فقط */
-  nav a,
+  /* LINKS */
   .nav-link {
-    font-size: 12px !important;   /* صغار */
-    padding: 4px 6px !important;  /* ما ياكلوش بلاصتهم */
-    white-space: nowrap !important;
+    font-size: 13px;       /* صغّر الكتابة */
+    padding: 4px 6px;      /* صغّر المساحة */
+    white-space: nowrap;  /* يمنع التكسير */
   }
 
-  /* أيقونة الكار */
-  nav a i {
-    font-size: 12px !important;
+  /* CART ICON */
+  .nav-link span {
+    font-size: 12px;
   }
 
 }
-    
-
