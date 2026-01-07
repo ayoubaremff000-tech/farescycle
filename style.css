@@ -627,3 +627,50 @@ footer{
     }
 }
 
+
+
+
+
+
+
+
+
+/* =============================== */
+/* FORCE SEARCH 70% / CATEGORY 30% */
+/* =============================== */
+@media screen and (max-width: 768px) {
+
+  /* container متاع search + categorie */
+  body .search-container,
+  body .search-bar,
+  body .filter-container,
+  body .search-wrapper {
+    display: grid !important;
+    grid-template-columns: 30% 70% !important; /* 👈 النسبة */
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  /* CATEGORIE */
+  body select,
+  body .category,
+  body .category-select {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* SEARCH */
+  body input[type="search"],
+  body input[type="text"],
+  body .search,
+  body .search-input {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 15px !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+  }
+}
