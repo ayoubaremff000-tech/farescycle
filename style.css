@@ -633,3 +633,12 @@ footer{
   }
 
 }
+
+    @media (max-width: 768px) {
+  .menu a {
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
