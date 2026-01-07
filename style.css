@@ -584,3 +584,44 @@ footer{
   }
 }
 
+/* =====================================
+   FORCE LOGO + MENU SAME ROW (MOBILE)
+===================================== */
+@media screen and (max-width: 768px) {
+
+  header,
+  .header,
+  .top-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* LOGO */
+  .logo,
+  .logo-box {
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* MENU */
+  nav,
+  .nav,
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  nav a,
+  .nav a,
+  .navbar a {
+    font-size: 14px !important;
+  }
+
+}
