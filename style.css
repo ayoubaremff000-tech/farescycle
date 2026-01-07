@@ -629,39 +629,45 @@ footer{
 
 
 
-/* ============================= */
-/* MOBILE FORCE SEARCH > CATEGORY */
-/* ============================= */
-@media (max-width: 768px) {
 
-  /* الحاوية متاع search + catégorie */
-  .search-container,
-  .search-box,
-  .filter-search {
-    display: flex !important;
-    align-items: center !important;
+
+
+/* =============================== */
+/* FORCE SEARCH 70% / CATEGORY 30% */
+/* =============================== */
+@media screen and (max-width: 768px) {
+
+  /* container متاع search + categorie */
+  body .search-container,
+  body .search-bar,
+  body .filter-container,
+  body .search-wrapper {
+    display: grid !important;
+    grid-template-columns: 30% 70% !important; /* 👈 النسبة */
     gap: 10px !important;
     width: 100% !important;
   }
 
-  /* CATÉGORIE (أصغر) */
-  select,
-  .category,
-  .category-select {
-    flex: 1 !important;
-    max-width: 30% !important;
+  /* CATEGORIE */
+  body select,
+  body .category,
+  body .category-select {
+    width: 100% !important;
+    max-width: 100% !important;
     font-size: 14px !important;
     padding: 10px !important;
+    box-sizing: border-box !important;
   }
 
-  /* SEARCH (أكبر) */
-  input[type="search"],
-  input[type="text"],
-  .search,
-  .search-input {
-    flex: 3 !important;          /* 👈 أكبر من catégorie */
-    max-width: 70% !important;
+  /* SEARCH */
+  body input[type="search"],
+  body input[type="text"],
+  body .search,
+  body .search-input {
+    width: 100% !important;
+    max-width: 100% !important;
     font-size: 15px !important;
     padding: 12px !important;
+    box-sizing: border-box !important;
   }
 }
