@@ -611,45 +611,36 @@ footer{
 
 
 
-/* ===============================
-   FORCE MOBILE NAV – FINAL FIX
-   =============================== */
+/* ===== MOBILE MENU FIX – MENU ONLY ===== */
 @media (max-width: 768px) {
 
-  /* ما نمسّش اللوغو */
-  .logo-box {
-    flex-shrink: 0 !important;
+  /* ما نمسّوش اللوغو نهائيا */
+  .logo-box,
+  .logo-box * {
+    all: unset;
   }
 
-  /* الهيدر */
-  header.top-bar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 6px 6px !important;
-  }
-
-  /* المينيو */
+  /* نقرّب المينيو */
   .nav {
     display: flex !important;
     flex-direction: row !important;
+    gap: 2px !important;          /* أقصى تقريـب */
+    margin-left: 6px !important;
     align-items: center !important;
-    gap: 4px !important;              /* أقصى تقريـب */
     flex-wrap: nowrap !important;
-    max-width: 60% !important;        /* باش يبانوا الكل */
-    overflow: hidden !important;
   }
 
-  /* الروابط */
+  /* نصغّر غير الروابط */
   .nav .nav-link {
-    font-size: 12px !important;       /* صغّرتهم بالقوّة */
-    padding: 3px 4px !important;
+    font-size: 11px !important;
+    padding: 2px 3px !important;
     margin: 0 !important;
     white-space: nowrap !important;
   }
 
-  /* Cart count / icon */
-  .nav .cart-count {
+  /* أيقونة الكارت */
+  .nav .nav-link span,
+  .nav .nav-link i {
     font-size: 11px !important;
   }
 
