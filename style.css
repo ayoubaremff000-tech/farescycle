@@ -613,38 +613,6 @@ footer{
 
 
     
-/* =========================
-   MOBILE FORCE FIX (FINAL)
-   ========================= */
-@media (max-width: 768px) {
-
-  /* HEADER */
-  header,
-  .top-bar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 6px 8px !important;
-  }
-
-  /* LOGO AREA (ما نكبروش، ما نصغروش أكثر) */
-  .logo-box {
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .logo-box img {
-    width: 42px !important;
-    height: 42px !important;
-  }
-
-  .logo-box span {
-    font-size: 14px !important;
-    white-space: nowrap !important;
-  }
-
   /* MENU */
   nav,
   .nav,
