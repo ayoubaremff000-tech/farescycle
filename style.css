@@ -610,65 +610,68 @@ footer{
     display: block;
 }
 
-/* ===============================
-   MOBILE ONLY (TALIPHOUN)
-   PC MA NMSOUCH
-================================ */
-@media (max-width: 768px) {
+/* =====================================
+   FORCE MOBILE FIX – PC NOT TOUCHED
+===================================== */
+@media screen and (max-width: 768px) {
 
-  /* HEADER */
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-    gap: 10px;
+  /* HEADER GLOBAL */
+  header.top-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px !important;
   }
 
   /* LOGO */
   .logo-box {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
   }
 
   .logo-box img {
-    width: 45px;
-    height: auto;
+    width: 45px !important;
+    height: auto !important;
   }
 
   .fares,
   .cycle {
-    font-size: 16px;
+    font-size: 16px !important;
+    line-height: 1 !important;
   }
 
   /* MENU */
-  .nav {
-    display: flex;
-    gap: 12px;
+  nav.nav {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
   }
 
-  .nav-link {
-    font-size: 14px;
+  nav.nav a {
+    font-size: 14px !important;
+    white-space: nowrap !important;
   }
 
   /* SEARCH + CATEGORY */
   .ultra-search {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 15px;
-    padding: 10px 14px;
-    border-radius: 30px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 12px !important;
+    margin: 15px !important;
   }
 
   .category-select {
-    font-size: 14px;
-    white-space: nowrap;
+    flex-shrink: 0 !important;
+    font-size: 14px !important;
   }
 
   .ultra-search input {
-    font-size: 14px;
+    flex: 1 !important;
+    font-size: 14px !important;
   }
 
 }
