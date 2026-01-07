@@ -585,12 +585,12 @@ footer{
 }
 
 /* =========================================
-   ABSOLUTE FORCE MOBILE HEADER FIX
-   PC NOT TOUCHED – MOBILE ONLY
+   FORCE MOBILE HEADER – SMALL SIZE
+   PC NOT TOUCHED
 ========================================= */
 @media screen and (max-width: 768px) {
 
-  /* أي header مهما كان اسمو */
+  /* HEADER */
   header,
   .header,
   .top-bar {
@@ -599,43 +599,45 @@ footer{
     align-items: center !important;
     justify-content: space-between !important;
     flex-wrap: nowrap !important;
+    padding: 6px 8px !important;
     width: 100% !important;
   }
 
-  /* LOGO (text أو image) */
+  /* LOGO */
   .logo,
   .logo-box,
   .logo-container {
     display: flex !important;
-    flex-direction: row !important;
     align-items: center !important;
-    gap: 6px !important;
+    gap: 4px !important;
+    font-size: 14px !important;
     white-space: nowrap !important;
-    flex-shrink: 0 !important;
+    max-width: 45% !important;
+    overflow: hidden !important;
   }
 
   .logo img {
-    width: 45px !important;
+    width: 34px !important;   /* 🔥 صغّرنا اللوغو */
     height: auto !important;
   }
 
-  /* MENU / NAV */
+  /* MENU */
   nav,
   .nav,
   .navbar {
     display: flex !important;
-    flex-direction: row !important;
     align-items: center !important;
-    gap: 10px !important;
+    gap: 6px !important;
     flex-wrap: nowrap !important;
-    white-space: nowrap !important;
+    max-width: 55% !important;
+    overflow: hidden !important;
   }
 
   nav a,
   .nav a,
   .navbar a {
-    display: inline-block !important;
-    font-size: 14px !important;
+    font-size: 12px !important;   /* 🔥 صغّرنا النص */
+    padding: 0 4px !important;
     white-space: nowrap !important;
   }
 
