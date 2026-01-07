@@ -611,37 +611,5 @@ footer{
 
 
 
-/* ===== MOBILE MENU FIX – MENU ONLY ===== */
-@media (max-width: 768px) {
 
-  /* ما نمسّوش اللوغو نهائيا */
-  .logo-box,
-  .logo-box * {
-    all: unset;
-  }
 
-  /* نقرّب المينيو */
-  .nav {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 2px !important;          /* أقصى تقريـب */
-    margin-left: 6px !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-  }
-
-  /* نصغّر غير الروابط */
-  .nav .nav-link {
-    font-size: 11px !important;
-    padding: 2px 3px !important;
-    margin: 0 !important;
-    white-space: nowrap !important;
-  }
-
-  /* أيقونة الكارت */
-  .nav .nav-link span,
-  .nav .nav-link i {
-    font-size: 11px !important;
-  }
-
-}
