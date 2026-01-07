@@ -628,14 +628,6 @@ footer{
     max-width: 34px !important;
   }
 
-  /* LOGO TEXT */
-  .logo span,
-  .logo h1,
-  .logo h2 {
-    font-size: 14px !important;
-    line-height: 1 !important;
-    white-space: nowrap !important;
-  }
 
   /* MENU CONTAINER */
   nav,
@@ -670,3 +662,4 @@ footer{
     max-width: 100% !important;
   }
 }
+
