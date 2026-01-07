@@ -76,56 +76,6 @@ body{
         height: 40px;
     }
 }
-
-/* CART ICON */
-.top-bar nav i{
-    font-size: 18px;
-}
-
-/* =========================
-   ?? MOBILE & TABLET
-========================= */
-@media (max-width: 768px){
-
-    .top-bar{
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 16px;
-    }
-
-    .top-bar .logo{
-        font-size: 22px;   /* ?? ???? Fares Cycle */
-        text-align: center;
-    }
-
-    .top-bar nav{
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-    }
-
-    .top-bar nav a{
-        font-size: 14px;   /* ?? ???? Home / Cart / Checkout */
-        margin: 0;
-    }
-
-    .top-bar nav i{
-        font-size: 14px;
-    }
-}
-
-/* ?? SMALL PHONES */
-@media (max-width: 480px){
-
-    .top-bar .logo{
-        font-size: 20px;
-    }
-
-    .top-bar nav a{
-        font-size: 13px;
-    }
-}
-
 /* ===== FILTER BAR ===== */
 .filter-bar {
     display: flex;
@@ -633,3 +583,4 @@ footer{
     font-size: 14px !important;
   }
 }
+
